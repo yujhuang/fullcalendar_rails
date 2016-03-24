@@ -34,6 +34,6 @@ ActiveRecord::Schema.define(version: 20100330111833) do
     t.integer  "event_series_id"
   end
 
-  add_index "events", ["event_series_id"], name: "index_events_on_event_series_id", using: :btree
+  add_index "events", ["event_series_id"], name: "index_events_on_event_series_id"
 
 end
