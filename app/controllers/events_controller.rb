@@ -79,15 +79,16 @@ class EventsController < ApplicationController
   def destroy
     @event = Event.find_by_id(params[:id])
     if params[:delete_all] == 'true'
-      @event.event_series.destroy
+      EventSeries.find_by_id(@event.event_series_id).destroy
     elsif params[:delete_all] == 'future'
-      @events = @event.event_series.events.find(:all, :conditions => ["starttime > '#{@event.starttime.to_formatted_s(:db)}' "])
-      @event.event_series.events.delete(@events)
+      @events = @event.event_series.events.where('starttime > :start_time',start_time: @event.starttime.to_formatted_s(:db)).to_a
+      EventSeries.find_by_id(@event.event_series_id).events.delete(@events)
     else
       @event.destroy
     end
     render :nothing => true   
   end
+  
 
   private
     def event_params
