@@ -1,0 +1,8 @@
+Thu, 24 Mar 2016 21:55:11 +0000
+README.rdoc	Thu, 24 Mar 2016 21:32:12 +0000
+app/controllers/application_controller.rb	Tue, 22 Mar 2016 23:34:47 +0000
+app/controllers/events_controller.rb	Wed, 23 Mar 2016 05:17:20 +0000
+app/helpers/application_helper.rb	Tue, 22 Mar 2016 00:51:54 +0000
+app/helpers/events_helper.rb	Tue, 22 Mar 2016 00:51:54 +0000
+app/models/event.rb	Tue, 22 Mar 2016 21:24:25 +0000
+app/models/event_series.rb	Tue, 22 Mar 2016 21:24:25 +0000
